@@ -23,7 +23,7 @@ class User extends Equatable {
   List<Object?> get props => [id, name, age, imageUrls, bio];
 
   static List<User> users = [
-    User(
+    const User(
       id: 1,
       name: 'John',
       age: 25,
@@ -39,7 +39,7 @@ class User extends Equatable {
       bio:
           'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
     ),
-    User(
+    const User(
       id: 2,
       name: 'Tamara',
       age: 30,
@@ -55,7 +55,7 @@ class User extends Equatable {
       bio:
           'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
     ),
-    User(
+    const User(
       id: 3,
       name: 'Marta',
       age: 35,
@@ -71,7 +71,7 @@ class User extends Equatable {
       bio:
           'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
     ),
-    User(
+    const User(
       id: 4,
       name: 'Sara',
       age: 30,
@@ -87,7 +87,7 @@ class User extends Equatable {
       bio:
           'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
     ),
-    User(
+    const User(
       id: 5,
       name: 'Anna',
       age: 35,
@@ -103,7 +103,7 @@ class User extends Equatable {
       bio:
           'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
     ),
-    User(
+    const User(
       id: 6,
       name: 'Lisa',
       age: 35,
@@ -119,7 +119,7 @@ class User extends Equatable {
       bio:
           'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
     ),
-    User(
+    const User(
       id: 7,
       name: 'Luisa',
       age: 35,
@@ -135,7 +135,7 @@ class User extends Equatable {
       bio:
           'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
     ),
-    User(
+    const User(
       id: 8,
       name: 'Sara',
       age: 35,
@@ -151,7 +151,7 @@ class User extends Equatable {
       bio:
           'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
     ),
-    User(
+    const User(
       id: 9,
       name: 'Andrea',
       age: 35,
@@ -167,7 +167,7 @@ class User extends Equatable {
       bio:
           'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
     ),
-    User(
+    const User(
       id: 10,
       name: 'Mary',
       age: 35,
@@ -183,7 +183,7 @@ class User extends Equatable {
       bio:
           'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
     ),
-    User(
+    const User(
       id: 11,
       name: 'Denise',
       age: 35,
@@ -199,7 +199,7 @@ class User extends Equatable {
       bio:
           'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
     ),
-    User(
+    const User(
       id: 12,
       name: 'Elle',
       age: 35,

@@ -1,21 +1,24 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 import '../../models/models.dart';
-import '../../widgets/widgets.dart';
 
 class ChatScreen extends StatelessWidget {
   static const String routeName = '/chat';
 
   static Route route({required UserMatch userMatch}) {
     return MaterialPageRoute(
-      settings: RouteSettings(name: routeName),
+      settings: const RouteSettings(name: routeName),
       builder: (context) => ChatScreen(userMatch: userMatch),
     );
   }
 
   final UserMatch userMatch;
 
-  const ChatScreen({required this.userMatch});
+  const ChatScreen({
+    Key? key,
+    required this.userMatch,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,72 +47,66 @@ class ChatScreen extends StatelessWidget {
           Expanded(
             child: SingleChildScrollView(
               child: userMatch.chat != null
-                  ? Container(
-                      child: ListView.builder(
-                          shrinkWrap: true,
-                          itemCount: userMatch.chat![0].messages.length,
-                          itemBuilder: (context, index) {
-                            return ListTile(
-                              title: userMatch
-                                          .chat![0].messages[index].senderId ==
-                                      1
-                                  ? Align(
-                                      alignment: Alignment.topRight,
-                                      child: Container(
+                  ? ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: userMatch.chat![0].messages.length,
+                      itemBuilder: (context, index) {
+                        return ListTile(
+                          title: userMatch.chat![0].messages[index].senderId ==
+                                  1
+                              ? Align(
+                                  alignment: Alignment.topRight,
+                                  child: Container(
+                                    padding: const EdgeInsets.all(8.0),
+                                    decoration: BoxDecoration(
+                                        borderRadius: const BorderRadius.all(
+                                          Radius.circular(8.0),
+                                        ),
+                                        color:
+                                            Theme.of(context).backgroundColor),
+                                    child: Text(
+                                      userMatch
+                                          .chat![0].messages[index].message,
+                                      style:
+                                          Theme.of(context).textTheme.headline6,
+                                    ),
+                                  ),
+                                )
+                              : Align(
+                                  alignment: Alignment.topLeft,
+                                  child: Row(
+                                    children: [
+                                      CircleAvatar(
+                                        radius: 15,
+                                        backgroundImage: NetworkImage(
+                                            userMatch.matchedUser.imageUrls[0]),
+                                      ),
+                                      const SizedBox(width: 10),
+                                      Container(
                                         padding: const EdgeInsets.all(8.0),
                                         decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.all(
-                                              Radius.circular(8.0),
-                                            ),
-                                            color: Theme.of(context)
-                                                .backgroundColor),
+                                          borderRadius: const BorderRadius.all(
+                                            Radius.circular(8.0),
+                                          ),
+                                          color: Theme.of(context).primaryColor,
+                                        ),
                                         child: Text(
                                           userMatch
                                               .chat![0].messages[index].message,
                                           style: Theme.of(context)
                                               .textTheme
-                                              .headline6,
+                                              .headline6!
+                                              .copyWith(
+                                                color: Colors.white,
+                                              ),
                                         ),
                                       ),
-                                    )
-                                  : Align(
-                                      alignment: Alignment.topLeft,
-                                      child: Row(
-                                        children: [
-                                          CircleAvatar(
-                                            radius: 15,
-                                            backgroundImage: NetworkImage(
-                                                userMatch
-                                                    .matchedUser.imageUrls[0]),
-                                          ),
-                                          SizedBox(width: 10),
-                                          Container(
-                                            padding: const EdgeInsets.all(8.0),
-                                            decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.all(
-                                                Radius.circular(8.0),
-                                              ),
-                                              color: Theme.of(context)
-                                                  .primaryColor,
-                                            ),
-                                            child: Text(
-                                              userMatch.chat![0].messages[index]
-                                                  .message,
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .headline6!
-                                                  .copyWith(
-                                                    color: Colors.white,
-                                                  ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                            );
-                          }),
-                    )
-                  : SizedBox(),
+                                    ],
+                                  ),
+                                ),
+                        );
+                      })
+                  : const SizedBox(),
             ),
           ),
           Container(
@@ -123,19 +120,19 @@ class ChatScreen extends StatelessWidget {
                     color: Theme.of(context).primaryColor,
                   ),
                   child: IconButton(
-                    icon: Icon(Icons.send_outlined),
+                    icon: const Icon(Icons.send_outlined),
                     onPressed: () {},
                     color: Colors.white,
                   ),
                 ),
-                Expanded(
+                const Expanded(
                   child: TextField(
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
                       hintText: 'Type here...',
                       contentPadding:
-                          const EdgeInsets.only(left: 20, bottom: 5, top: 5),
+                          EdgeInsets.only(left: 20, bottom: 5, top: 5),
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),
                       ),

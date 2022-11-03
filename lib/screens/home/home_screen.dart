@@ -9,13 +9,16 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class HomeScreen extends StatelessWidget {
   static const String routeName = '/';
 
+  const HomeScreen({Key? key}) : super(key: key);
+
   static Route route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: routeName),
-      builder: (context) => HomeScreen(),
+      builder: (context) => const HomeScreen(),
     );
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(title: 'DISCOVER'),
@@ -69,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                           print('Swiped Right');
                         },
                         child: ChoiceButton(
-                          color: Theme.of(context).accentColor,
+                          color: Theme.of(context).colorScheme.secondary,
                           icon: Icons.clear_rounded,
                         ),
                       ),

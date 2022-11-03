@@ -22,6 +22,7 @@ class AuthRepository extends BaseAuthRepository {
       final user = credential.user;
       return user;
     } catch (_) {}
+    return null;
   }
 
   @override
@@ -46,6 +47,7 @@ class LoginRepository extends BaseLoginRepository {
       final user = credential.user;
       return user;
     } catch (_) {}
+    return null;
   }
 
   @override

@@ -1,15 +1,17 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:dating_app/blocs/swipe/swipe_bloc.dart';
 import 'package:dating_app/models/user_model.dart';
 import 'package:dating_app/widgets/choice_button.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class UsersScreen extends StatelessWidget {
   static const String routeName = '/users';
 
   static Route route({required User user}) {
     return MaterialPageRoute(
-      settings: RouteSettings(name: routeName),
+      settings: const RouteSettings(name: routeName),
       builder: (context) => UsersScreen(user: user),
     );
   }
@@ -17,8 +19,9 @@ class UsersScreen extends StatelessWidget {
   final User user;
 
   const UsersScreen({
+    Key? key,
     required this.user,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +80,8 @@ class UsersScreen extends StatelessWidget {
                                   print('Swiped Right');
                                 },
                                 child: ChoiceButton(
-                                  color: Theme.of(context).accentColor,
+                                  color:
+                                      Theme.of(context).colorScheme.secondary,
                                   icon: Icons.clear_rounded,
                                 ),
                               ),
@@ -104,7 +108,7 @@ class UsersScreen extends StatelessWidget {
                             ],
                           );
                         } else {
-                          return Text('Something went wrong.');
+                          return const Text('Something went wrong.');
                         }
                       },
                     ),
@@ -128,14 +132,14 @@ class UsersScreen extends StatelessWidget {
                       .headline3!
                       .copyWith(fontWeight: FontWeight.normal),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Text('About', style: Theme.of(context).textTheme.headline3),
                 Text(user.bio,
                     style: Theme.of(context)
                         .textTheme
                         .bodyText1!
                         .copyWith(height: 2)),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Text('Interests', style: Theme.of(context).textTheme.headline3),
                 Row(
                   children: user.interests
@@ -147,7 +151,7 @@ class UsersScreen extends StatelessWidget {
                               gradient: LinearGradient(
                                 colors: [
                                   Theme.of(context).primaryColor,
-                                  Theme.of(context).accentColor,
+                                  Theme.of(context).colorScheme.secondary,
                                 ],
                               ),
                             ),

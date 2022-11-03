@@ -14,7 +14,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
   LoginBloc({required LoginRepository authRepository})
       : _authRepository = authRepository,
-        super(LoginState.unknown()) {
+        super(const LoginState.unknown()) {
     _streamSubscription = _authRepository.user.listen(
       (user) => add(
         LoginUserChanged(user: user!),

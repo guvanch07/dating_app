@@ -6,10 +6,12 @@ import '../../widgets/widgets.dart';
 class MatchesScreen extends StatelessWidget {
   static const String routeName = '/matches';
 
+  const MatchesScreen({Key? key}) : super(key: key);
+
   static Route route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: routeName),
-      builder: (context) => MatchesScreen(),
+      settings: const RouteSettings(name: routeName),
+      builder: (context) => const MatchesScreen(),
     );
   }
 
@@ -23,7 +25,7 @@ class MatchesScreen extends StatelessWidget {
         .toList();
 
     return Scaffold(
-      appBar: CustomAppBar(title: 'MATCHES'),
+      appBar: const CustomAppBar(title: 'MATCHES'),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -54,7 +56,7 @@ class MatchesScreen extends StatelessWidget {
                       );
                     }),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Text(
                 'Your Chats',
                 style: Theme.of(context).textTheme.headline4,
@@ -82,7 +84,7 @@ class MatchesScreen extends StatelessWidget {
                                 activeMatches[index].matchedUser.name,
                                 style: Theme.of(context).textTheme.headline5,
                               ),
-                              SizedBox(height: 5),
+                              const SizedBox(height: 5),
                               Text(
                                 activeMatches[index]
                                     .chat![0]
@@ -90,7 +92,7 @@ class MatchesScreen extends StatelessWidget {
                                     .message,
                                 style: Theme.of(context).textTheme.headline6,
                               ),
-                              SizedBox(height: 5),
+                              const SizedBox(height: 5),
                               Text(
                                 activeMatches[index]
                                     .chat![0]

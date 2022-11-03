@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1069695081293",
+    "project_id": "datingapp-9849f",
+    "storage_bucket": "datingapp-9849f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069695081293:android:e078e203a70c1c7897f504",
+        "android_client_info": {
+          "package_name": "com.example.dating_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069695081293-c1os7kstnangk4mut2hi50s0ssj2ipql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQ8EFkeszMY90V55HThIb15Xp34kE20b8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069695081293-c1os7kstnangk4mut2hi50s0ssj2ipql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069695081293:android:6b9855b04b64499e97f504",
+        "android_client_info": {
+          "package_name": "com.example.flutter_dating_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069695081293-c1os7kstnangk4mut2hi50s0ssj2ipql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQ8EFkeszMY90V55HThIb15Xp34kE20b8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069695081293-c1os7kstnangk4mut2hi50s0ssj2ipql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -32,7 +32,7 @@ class SwipeLeftEvent extends SwipeEvent {
 class SwipeRightEvent extends SwipeEvent {
   final User user;
 
-  SwipeRightEvent({
+  const SwipeRightEvent({
     required this.user,
   });
 
